@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 25px;
+    background: #10B082;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 15px;
+}
+
+.input {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline-color: #967851;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.container .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    transition: font-size 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+#convertBtn {
+    width: 30%;
+    background: #967851;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#convertBtn:hover {
+    background: #7A5B3F;
+}
+
+#convertBtn:active {
+    background: #634428;
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 3px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    display: none;
+    position: absolute;
+}
+
+.text {
+    display: block;
+}
+
+.checkmark {
+    display: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+}
+
+/* Loader animatsiyasi */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- RESPONSIVLIK --- */
+
+/* Telefonlar uchun (max-width: 600px) */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        gap: 10px;
+        margin-top: 50px;
+    }
+
+    .input {
+        width: 90%;
+    }
+
+    #convertBtn {
+        width: 80%;
+    }
+
+    .container .title {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Planshetlar uchun (max-width: 900px) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+        gap: 12px;
+        margin-top: 70px;
+    }
+
+    .input {
+        width: 70%;
+    }
+
+    #convertBtn {
+        width: 50%;
+    }
+
+    .container .title {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+}
