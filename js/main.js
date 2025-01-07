@@ -61,6 +61,6 @@ convertBtn.addEventListener("click", () => {
         setTimeout(() => {
             checkmark.style.display = "none";
             text.style.display = "block";
-        }, 1000);
-    }, 2000);
+        }, 500);
+    }, 1000);
 });
